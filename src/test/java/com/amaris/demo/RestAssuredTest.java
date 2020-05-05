@@ -9,6 +9,10 @@ public class RestAssuredTest {
 
 	@Test
 	public void exampleOfTestNgMaven() {
-        RestAssured.get("172.30.94.117:8080").then().assertThat().statusCode(200);
+        String target = System.getProperty("target");
+        if (target == null) {
+            target="http://www.google.com";
+        }
+        RestAssured.get(target).then().assertThat().statusCode(200);
 	}
 }

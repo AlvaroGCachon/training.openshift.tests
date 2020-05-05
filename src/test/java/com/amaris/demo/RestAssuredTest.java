@@ -9,7 +9,7 @@ public class RestAssuredTest {
 
 	@Test
 	public void exampleOfTestNgMaven() {
-        RestAssured.get("nginx-example").then().statusCode(200).assertThat()
-            .body("url", equalTo("nginx-example"));
+        RestAssured.get("nginx-example:8080").then().statusCode(200).assertThat()
+            .body("url", equalTo("nginx-example:8080"));
 	}
 }

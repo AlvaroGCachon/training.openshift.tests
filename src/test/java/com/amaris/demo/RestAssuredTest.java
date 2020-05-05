@@ -9,7 +9,6 @@ public class RestAssuredTest {
 
 	@Test
 	public void exampleOfTestNgMaven() {
-        RestAssured.get("http://test-app-school.2886795276-80-jago05.environments.katacoda.com").then().statusCode(200).assertThat()
-            .body("url", equalTo("http://test-app-school.2886795276-80-jago05.environments.katacoda.com"));
+        RestAssured.get("http://test-app-school.2886795276-80-jago05.environments.katacoda.com").then().assertThat().statusCode(200)
 	}
 }
